@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "ru.ghoul.pgtest"
+        versionCode = "10" 
+        version     = "1.0.0" >
+
+    <name>PG ghoul-test</name>
+
+    <description>
+        тествый сайт 
+    </description>
+
+    <author href="http://ghoul.ru" email="info@ghoul.ru">
+	LouD
+    </author>
+
+    <gap:platform name="android" />
+</widget>
