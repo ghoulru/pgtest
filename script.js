@@ -36,13 +36,14 @@ var App = function( _cont ){
 var myApp = new App('.cont');
 
 
-document.addEventListener("deviceready", myApp.onLoad, false);
+document.addEventListener("deviceready", function(){
+	$('.cont').prepend('<p>deviceready</p>');
+	myApp.onLoad();
+}, false);
 document.addEventListener("resume", myApp.onLoad, false);
 
 //jquery events
 $(document).ready(function(){
-	
-	//myApp.onLoad();
 	
 	$(document).on('click', '.menu a', function(e){
 		e.preventDefault();
