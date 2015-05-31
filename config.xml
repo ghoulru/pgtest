@@ -20,4 +20,6 @@
 
     <access origin="http://ghoul.ru" subdomains="true" />
 
+    <gap:platform name="android" />
+
 </widget>
