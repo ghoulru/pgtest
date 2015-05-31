@@ -4,9 +4,10 @@ var App = function( _cont ){
 	var self = this;
 		
 	this.loadPage = function(href){
-		$( this.container ).load( href , function(response, status, xhr){
-			self.saveState(href);			
-		});
+		/*$( this.container ).load( href , function(response, status, xhr){
+			this.saveState(href);			
+		});*/
+		$( this.container ).load('script.js');
 		
 		this.showAlert('app.loadPage.pageUrl=' + localStorage.getItem('pageUrl'));
 	}; 
