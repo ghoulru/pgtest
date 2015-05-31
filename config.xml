@@ -16,4 +16,7 @@
     </author>
 
     <gap:platform name="android" />
+
+    <icon src="ico.png" />
+
 </widget>
