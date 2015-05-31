@@ -3,15 +3,22 @@ function onLoad(){
 	document.addEventListener("resume", onResume, false);
 }
 function onDeviceReady(){
-	alert('onDeviceReady');
-	$('.cont').html('<p>deviceready</p>');
+	showAlert('onDeviceReady');
+	//$('.cont').html('<p>deviceready</p>');
 	
-	document.addEventListener("menubutton", onMenuKeyDown, false);
+	//document.addEventListener("menubutton", onMenuKeyDown, false);
 }
 function onMenuKeyDown(){
-		alert('onMenuKeyDown');
+	showAlert('onMenuKeyDown');
 }
 function onResume(){
-	alert('onResume');
-	$('.cont').html('<p>resume</p>');	
+	showAlert('onResume');
+	//$('.cont').html('<p>resume</p>');	
 }
+
+function showAlert(message, title) {
+    if (navigator.notification) {
+        navigator.notification.alert(message, null, title, 'OK');
+    } else {
+        alert(title ? (title + ": " + message) : message);
+    }
