@@ -8,28 +8,7 @@
 <link rel="stylesheet" href="style.css">
 
 
-<script>
-function onResume(){
-	alert('onResume');
-}
-function onDeviceReady(){
-	setTimeout(function(){
-		alert("onDeviceReady");
-	}, 500);	
-}
 
-
-function onLoad(){
-	document.addEventListener("deviceready", onDeviceReady, false);
-	/*document.addEventListener("deviceready", function(){
-		alert('onLoad - deviceready');
-		document.addEventListener("resume", onResume, false);
-	}, false);*/
-
-	
-}
-
-</script>
 </head>
 <body onload="onLoad()">
 
@@ -42,10 +21,39 @@ function onLoad(){
 		<a href="#" data-href="page2.html" data-id="2">Стр 2</a></li>
 	</ul>
 	<div class="cont">
-	Главная страница... simple 10 aaaaaaaaaaaa
+	Главная страница... simple 11
 	</div>
 
 </div>
+<script type="text/javascript">
+/*function onResume(){
+	alert('onResume');
+}
+function onDeviceReady(){
+	alert("onDeviceReady 1");
+	setTimeout(function(){
+		alert("onDeviceReady 2");
+	}, 500);	
+}
 
+
+function onLoad(){
+	document.addEventListener("deviceready", onDeviceReady, false);
+	/*document.addEventListener("deviceready", function(){
+		alert('onLoad - deviceready');
+		document.addEventListener("resume", onResume, false);
+	}, false);*/
+
+	
+//}
+window.addEventListener("load", function () {
+	document.addEventListener("deviceready", function () {
+		alert("deviceready");
+		document.addEventListener("resume", function () {
+			alert("resume");
+		});
+	});
+}, false); 
+</script>
 </body>
 </html>
