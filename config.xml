@@ -19,4 +19,6 @@
 
     <icon src="ico.png" />
 
+    <access origin="http://ghoul.ru" subdomains="true" />
+
 </widget>

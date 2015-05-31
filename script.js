@@ -1,20 +1,3 @@
-$(document).ready(function(){
-	
-	var myApp = new App('.cont');
-
-	
-	document.addEventListener("deviceready", myApp.onLoad, false);
-	document.addEventListener("resume", myApp.onLoad, false);
-
-	$(document).on('click', '.menu a', function(e){
-		e.preventDefault();
-				
-		if( typeof $(this).data('href') != 'undefined' ){
-			myApp.loadPage($(this).data('href'));
-		}
-	})
-});
-
 var App = function( _cont ){
 		
 	this.container = _cont;
@@ -36,6 +19,36 @@ var App = function( _cont ){
 			this.loadPage(pageUrl);
 		}
 		
-		console.log('app.onLoad.pageUrl=' + pageUrl);
+		//console.log('app.onLoad.pageUrl=' + pageUrl);
+		this.showAlert('app.onLoad.pageUrl=' + pageUrl);
+	};
+	
+	this.showAlert = function (message, title) {
+	    if (navigator.notification) {
+	        navigator.notification.alert(message, null, title, 'OK');
+	    } else {
+	        alert(title ? (title + ": " + message) : message);
+	    }
 	};
 }
+
+
+var myApp = new App('.cont');
+
+
+document.addEventListener("deviceready", myApp.onLoad, false);
+document.addEventListener("resume", myApp.onLoad, false);
+
+//jquery events
+$(document).ready(function(){
+	
+	//myApp.onLoad();
+	
+	$(document).on('click', '.menu a', function(e){
+		e.preventDefault();
+				
+		if( typeof $(this).data('href') != 'undefined' ){
+			myApp.loadPage($(this).data('href'));
+		}
+	})
+});
