@@ -22,3 +22,12 @@ function showAlert(message, title) {
     } else {
         alert(title ? (title + ": " + message) : message);
     }
+}
+$(document).ready(function(){
+	
+	$(document).on('click', '.menu a', function(e){
+		e.preventDefault();
+				
+		showAlert('page load', 'click');
+	})
+});
