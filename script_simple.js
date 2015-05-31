@@ -1,8 +1,4 @@
-function onLoad(){
-	showAlert('onLoad', 'body');
-	document.addEventListener("deviceready", onDeviceReady, false);
-	//document.addEventListener("resume", onResume, false);
-}
+
 function onDeviceReady(){
 	showAlert('onDeviceReady');
 	//$('.cont').html('<p>deviceready</p>');
@@ -23,6 +19,13 @@ function showAlert(message, title) {
     } else {
         alert(title ? (title + ": " + message) : message);
     }
+}
+function onLoad(){
+	
+	document.addEventListener("deviceready", function(){
+		showAlert('onLoad - deviceready', 'onLoad');
+	}, false);
+	document.addEventListener("resume", onResume, false);
 }
 /*$(document).ready(function(){
 	
