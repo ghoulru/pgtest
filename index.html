@@ -12,14 +12,23 @@
 function onResume(){
 	alert('onResume');
 }
+function onDeviceReady(){
+	setTimeout(function(){
+		alert("onDeviceReady");
+	}, 500);	
+}
+
 
 function onLoad(){
-	
-	document.addEventListener("deviceready", function(){
+	document.addEventListener("deviceready", onDeviceReady, false);
+	/*document.addEventListener("deviceready", function(){
 		alert('onLoad - deviceready');
-	}, false);
-	document.addEventListener("resume", onResume, false);
+		document.addEventListener("resume", onResume, false);
+	}, false);*/
+
+	
 }
+
 </script>
 </head>
 <body onload="onLoad()">
@@ -33,7 +42,7 @@ function onLoad(){
 		<a href="#" data-href="page2.html" data-id="2">Стр 2</a></li>
 	</ul>
 	<div class="cont">
-	Главная страница... simple 9
+	Главная страница... simple 10 aaaaaaaaaaaa
 	</div>
 
 </div>
