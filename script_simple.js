@@ -1,4 +1,5 @@
 function onLoad(){
+	showAlert('onLoad', 'body');
 	document.addEventListener("deviceready", onDeviceReady, false);
 	document.addEventListener("resume", onResume, false);
 }
