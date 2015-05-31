@@ -38,17 +38,19 @@ var App = function( _cont ){
 var myApp = new App('.cont');
 
 
-document.addEventListener("deviceready", function(){
-	$('.cont').append('<p>deviceready</p>');
-	myApp.onLoad();
-}, false);
-document.addEventListener("resume", function(){
-	$('.cont').append('<p>resume</p>');
-	myApp.onLoad();
-}, false);
+
 
 //jquery events
 $(document).ready(function(){
+	
+	document.addEventListener("deviceready", function(){
+		$('.cont').append('<p>deviceready</p>');
+		myApp.onLoad();
+	}, false);
+	document.addEventListener("resume", function(){
+		$('.cont').append('<p>resume</p>');
+		myApp.onLoad();
+	}, false);
 	
 	$(document).on('click', '.menu a', function(e){
 		e.preventDefault();
