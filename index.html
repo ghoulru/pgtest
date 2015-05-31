@@ -5,11 +5,22 @@
 <title>Тестовое приложение</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="Author" content="LouD, info@ghoul.ru"/>
-<link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,cyrillic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="style.css">
 
 
-<script src="script_simple.js"></script>
+<script>
+function onResume(){
+	alert('onResume');
+}
+
+function onLoad(){
+	
+	document.addEventListener("deviceready", function(){
+		alert('onLoad - deviceready');
+	}, false);
+	document.addEventListener("resume", onResume, false);
+}
+</script>
 </head>
 <body onload="onLoad()">
 
@@ -22,9 +33,9 @@
 		<a href="#" data-href="page2.html" data-id="2">Стр 2</a></li>
 	</ul>
 	<div class="cont">
-	Главная страница... simple 7
+	Главная страница... simple 9
 	</div>
-<!--script src="jquery-1.11.0.min.js"></script-->
+
 </div>
 
 </body>
