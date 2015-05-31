@@ -15,7 +15,6 @@
 	LouD
     </author>
 
-    <gap:platform name="android" />
 
     <icon src="ico.png" />
 
