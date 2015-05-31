@@ -9,7 +9,7 @@ var App = function( _cont ){
 		});*/
 		$( this.container ).load('script.js');
 		
-		this.showAlert('app.loadPage.pageUrl=' + localStorage.getItem('pageUrl'));
+		//this.showAlert('app.loadPage.pageUrl=' + localStorage.getItem('pageUrl'));
 	}; 
 	
 	this.saveState = function(pageUrl){
