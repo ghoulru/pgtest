@@ -1,9 +1,7 @@
 $(document).ready(function(){
-	//localStorage.clear();
-	//var pageId = localStorage.getItem('pageId');
 	
 	var myApp = new App('.cont');
-	//myApp.container = '.cont';
+
 	
 	document.addEventListener("deviceready", myApp.onLoad, false);
 	document.addEventListener("resume", myApp.onLoad, false);
