@@ -1,7 +1,7 @@
 function onLoad(){
 	showAlert('onLoad', 'body');
-	document.addEventListener("deviceready", onDeviceReady, false);
-	document.addEventListener("resume", onResume, false);
+	document.addEventListener("deviceready", onDeviceReady, true);
+	document.addEventListener("resume", onResume, true);
 }
 function onDeviceReady(){
 	showAlert('onDeviceReady');
