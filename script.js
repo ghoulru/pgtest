@@ -42,7 +42,10 @@ document.addEventListener("deviceready", function(){
 	$('.cont').append('<p>deviceready</p>');
 	myApp.onLoad();
 }, false);
-document.addEventListener("resume", myApp.onLoad, false);
+document.addEventListener("resume", function(){
+	$('.cont').append('<p>resume</p>');
+	myApp.onLoad();
+}, false);
 
 //jquery events
 $(document).ready(function(){
