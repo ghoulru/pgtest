@@ -1,7 +1,7 @@
 function onLoad(){
 	showAlert('onLoad', 'body');
-	document.addEventListener("deviceready", onDeviceReady, true);
-	document.addEventListener("resume", onResume, true);
+	document.addEventListener("deviceready", onDeviceReady, false);
+	//document.addEventListener("resume", onResume, false);
 }
 function onDeviceReady(){
 	showAlert('onDeviceReady');
@@ -24,11 +24,11 @@ function showAlert(message, title) {
         alert(title ? (title + ": " + message) : message);
     }
 }
-$(document).ready(function(){
+/*$(document).ready(function(){
 	
 	$(document).on('click', '.menu a', function(e){
 		e.preventDefault();
 				
 		showAlert('page load', 'click');
 	})
-});
+});*/
