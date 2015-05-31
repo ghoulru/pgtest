@@ -43,15 +43,6 @@ var myApp = new App('.cont');
 //jquery events
 $(document).ready(function(){
 	
-	document.addEventListener("deviceready", function(){
-		$('.cont').append('<p>deviceready</p>');
-		myApp.onLoad();
-	}, false);
-	document.addEventListener("resume", function(){
-		$('.cont').append('<p>resume</p>');
-		myApp.onLoad();
-	}, false);
-	
 	$(document).on('click', '.menu a', function(e){
 		e.preventDefault();
 				
@@ -60,3 +51,23 @@ $(document).ready(function(){
 		}
 	})
 });
+
+function onLoad(){
+	
+	document.addEventListener("deviceready", onDeviceReady, false);
+	document.addEventListener("resume", onResume, false);
+}
+function onDeviceReady(){
+	myApp.showAlert('deviceready', 'Msg');
+	$('.cont').append('<p>deviceready</p>');
+	//myApp.onLoad();
+	document.addEventListener("menubutton", onMenuKeyDown, false);
+}
+function onMenuKeyDown(){
+	myApp.showAlert('onMenuKeyDown', 'Menu');
+}
+function onResume(){
+	$('.cont').append('<p>resume</p>');
+	//myApp.onLoad();
+	myApp.showAlert('resume', 'Msg');
+}
