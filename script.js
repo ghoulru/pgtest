@@ -7,6 +7,8 @@ var App = function( _cont ){
 		$( this.container ).load( href , function(response, status, xhr){
 			self.saveState(href);			
 		});
+		
+		this.showAlert('app.loadPage.pageUrl=' + localStorage.getItem('pageUrl'));
 	}; 
 	
 	this.saveState = function(pageUrl){
@@ -37,7 +39,7 @@ var myApp = new App('.cont');
 
 
 document.addEventListener("deviceready", function(){
-	$('.cont').prepend('<p>deviceready</p>');
+	$('.cont').append('<p>deviceready</p>');
 	myApp.onLoad();
 }, false);
 document.addEventListener("resume", myApp.onLoad, false);
