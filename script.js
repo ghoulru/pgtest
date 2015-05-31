@@ -60,7 +60,7 @@ function onLoad(){
 }
 function onDeviceReady(){
 	myApp.showAlert('deviceready', 'Msg');
-	$('.cont').append('<p>deviceready</p>');
+	$('.cont').html('<p>deviceready</p>');
 	//myApp.onLoad();
 	document.addEventListener("menubutton", onMenuKeyDown, false);
 }
@@ -68,7 +68,7 @@ function onMenuKeyDown(){
 	myApp.showAlert('onMenuKeyDown', 'Menu');
 }
 function onResume(){
-	$('.cont').append('<p>resume</p>');
+	$('.cont').html('<p>resume</p>');
 	//myApp.onLoad();
 	myApp.showAlert('resume', 'Msg');
 }
