@@ -14,11 +14,10 @@
 	LouD
     </author>
 
+    <gap:platform name="android" />
 
     <icon src="ico.png" />
 
     <access origin="http://ghoul.ru" subdomains="true" />
-
-    <gap:platform name="android" />
 
 </widget>
