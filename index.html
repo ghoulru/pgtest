@@ -6,27 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="Author" content="LouD, info@ghoul.ru"/>
 <link rel="stylesheet" href="style.css">
-
-
-
-</head>
-<body onload="onLoad()">
-
-<div class="main">
-
-	<ul class="menu">
-		<li class="act">
-		<a href="#" data-href="index.html" data-id="0">Главная</a></li><li>
-		<a href="#" data-href="page.html" data-id="1">Стр 1</a></li><li>
-		<a href="#" data-href="page2.html" data-id="2">Стр 2</a></li>
-	</ul>
-	<div class="cont">
-	Главная страница... simple 11
-	</div>
-
-</div>
+<script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript">
-/*function onResume(){
+function onResume(){
 	alert('onResume');
 }
 function onDeviceReady(){
@@ -46,6 +28,7 @@ function onLoad(){
 
 	
 //}
+/*
 window.addEventListener("load", function () {
 	document.addEventListener("deviceready", function () {
 		alert("deviceready");
@@ -53,7 +36,25 @@ window.addEventListener("load", function () {
 			alert("resume");
 		});
 	});
-}, false); 
+}, false); */
 </script>
+</head>
+<body onload="onLoad()">
+
+<div class="main">
+
+	<ul class="menu">
+		<li class="act">
+		<a href="#" data-href="index.html" data-id="0">Главная</a></li><li>
+		<a href="#" data-href="page.html" data-id="1">Стр 1</a></li><li>
+		<a href="#" data-href="page2.html" data-id="2">Стр 2</a></li>
+	</ul>
+	<div class="cont">
+	Главная страница... simple 12
+	</div>
+
+</div>
+
+
 </body>
 </html>
